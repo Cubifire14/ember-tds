@@ -1,4 +1,5 @@
 import Model, { attr, hasMany, belongsTo } from '@ember-data/model';
+import { action } from '@ember/object';
 
 export default class OrderModel extends Model {
   @attr('date') dateCreation;
@@ -20,5 +21,10 @@ export default class OrderModel extends Model {
 
   get user() {
     return this.user;
+  }
+
+  @action
+  changeStatus() {
+    this.status = 'prepared';
   }
 }
