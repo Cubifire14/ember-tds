@@ -17,4 +17,8 @@ export default class OrderModel extends Model {
   get status() {
     return this.status;
   }
+
+  get user() {
+    return this.user;
+  }
 }
